@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's Menu</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        .banner {
+            width: 1860px;
+            height: 745px; /* Adjusted height */
+            position: relative; /* Allows text to be positioned over the image */
+            overflow: hidden; /* Ensure the image stays within the banner */
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto; /* Ensure the image scales proportionally */
+            display: block; /* Remove any default spacing */
+        }
+
+        .banner-text {
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* CSS for rounded search bar */
+        #search-bar {
+            padding: 10px;
+            border-radius: 20px; /* Adjust the border-radius value to change the roundness */
+            border: 2px solid #ddd; /* Border color */
+            font-size: 16px;
+            outline: none; /* Remove outline when focused */
+            transition: border-color 0.3s ease; /* Smooth transition for border color change */
+            width: 300px; /* Adjust width as needed */
+        }
+
+        /* Style for hover and focus effects */
+        #search-bar:hover,
+        #search-bar:focus {
+            border-color: #aaa; /* Border color when hovered or focused */
+        }
+
+        #cart-button {
+            padding: 10px 20px; /* Adjust padding for button size */
+            border-radius: 20px; /* Adjust the border-radius value to change the roundness */
+            border: none; /* Remove default button border */
+            background-color: #d50000; /* Button background color */
+            color: #333; /* Button text color */
+            font-size: 16px;
+            cursor: pointer; /* Show pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth transition for background color change */
+            outline: none; /* Remove outline when focused */
+        }
+
+        /* Style for hover and focus effects */
+        #cart-button:hover,
+        #cart-button:focus {
+            background-color: #ffd633; /* Button background color when hovered or focused */
+        }
+
+        .category-button {
+            background-color: #d50000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            outline: none;
+        }
+
+        .category-button:hover,
+        .category-button:focus {
+            background-color: #b71c1c;
+        }
+
+        /* CSS for menu categories */
+        .menu-categories {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* CSS for menu items */
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            margin-bottom: 20px;
+            width: calc(33.333% - 20px); /* Subtracting the margin to fit 3 columns */
+            text-align: center;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .menu-item button {
+            margin-top: 10px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #d50000;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-item button:hover,
+        .menu-item button:focus {
+            background-color: #b71c1c;
+        }
+
+        /* Aesthetic button styles */
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-primary {
+            background-color: #007bff;
+            color: #333;
+        }
+
+        .button-primary:hover,
+        .button-primary:focus {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .button-secondary {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        .button-secondary:hover,
+        .button-secondary:focus {
+            background-color: #45a049;
+        }
+
+        /* CSS for banner */
+        .banner {
+        width: 100%;
+        height: 745px; /* Ensure this height matches your desired height */
+        position: relative;
+        overflow: hidden;
+        }
+
+        .banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+        .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        }
+
+        #banner-pls {
+        height: 745px;
+        width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.png" alt="McDonald's Logo" id="logo"></a>
+        <input type="text" id="search-bar" placeholder="Search...">
+        <div id="cart-container">
+            <button id="cart-button">Cart (<span id="cart-count">0</span>)</button>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <div id="cart-items"></div>
+                <div id="cart-total"></div>
+            </div>
+        </div>
+        
+    
+        <a href="signup.html" class="button button-primary">Sign Up</a>
+        <a href="login.html" class="button button-secondary">Login</a>
+        
+    </header>
+
+    
+
+
+    <main id="main-content">
+        <div class="banner">
+            <img src="banner.jpg" id="banner-pls" alt="Banner Image" class ="custom-height"> <!-- Replace with your image path -->
+        </div>
+
+        
+        <div class="menu-header">
+            <h1>Our Menu</h1>
+        </div>
+
+        
+        <div class="menu-categories">
+            <button class="category-button" onclick="showCategory('all')">All</button>
+            <button class="category-button" onclick="showCategory('breakfast')">Breakfast</button>
+            <button class="category-button" onclick="showCategory('happy-meals')">Happy Meals</button>
+            <button class="category-button" onclick="showCategory('dessert')">Dessert</button>
+            <button class="category-button">Side & Drinks</button>
+        </div>
+
+        <!-- Happy Meals -->
+        <div class="menu-container" id="happy-meals-menu" style="display: none;">
+            <div class="menu-item">
+                <img src="hp-chicken-burger.jpg" alt="Happy Meal Chicken Burger">
+                <div class="item-info">
+                    <h2>Happy Meal Chicken Burger</h2>
+                    <p>Price: $4.99</p>
+                    <p>Nutritional Info: Calories (558kcal)</p>
+                    <button class="add-to-cart" data-item="Happy Meal Chicken Burger" data-price="4.99">Add to Cart</button>
+                </div>
+            </div>
+
+           
+            <div class="menu-item">
+                <img src="hp-chicken-nuggets.jpg" alt="Happy Meal McNuggets">
+                <div class="item-info">
+                    <h2>Happy Meal McNuggets</h2>
+                    <p>Price: $4.99</p>
+                    <p>Nutritional Info: Calories (394kcal)</p>
+                    <button class="add-to-cart" data-item="Happy Meal McNuggets" data-price="4.99">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="hp-pancakes.jpg" alt="Happy Meal Pancakes">
+                <div class="item-info">
+                    <h2>Happy Meal Pancakes</h2>
+                    <p>Price: $7.99</p>
+                    <p>Nutritional Info: Calories (394kcal)</p>
+                    <button class="add-to-cart" data-item="Happy Meal Pancakes" data-price="7.99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Breakfast -->
+        <div class="menu-container" id="breakfast-menu" style="display: none;">
+            <div class="menu-item">
+                <img src="big-breakfast.jpg" alt="Big Breakfast">
+                <div class="item-info">
+                    <h2>Big Breakfast</h2>
+                    <p>Price: $6.99</p>
+                    <p>Nutritional Info: Calories (558kcal)</p>
+                    <button class="add-to-cart" data-item="Big Breakfast" data-price="6.99">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="crispy-chicken-muffin.jpg" alt="Crispy Chicken Muffin">
+                <div class="item-info">
+                    <h2>Crispy Chicken Muffin</h2>
+                    <p>Price: $4.99</p>
+                    <p>Nutritional Info: Calories (394kcal)</p>
+                    <button class="add-to-cart" data-item="Crispy Chicken Muffin" data-price="4.99">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="hashbrowns.jpg" alt="Hashbrowns">
+                <div class="item-info">
+                    <h2>Hashbrowns</h2>
+                    <p>Price: $2.49</p>
+                    <p>Nutritional Info: Calories (156kcal)</p>
+                    <button class="add-to-cart" data-item="Hashbrowns" data-price="2.49">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="pancakes.jpg" alt="Pancakes">
+                <div class="item-info">
+                    <h2>Pancakes</h2>
+                    <p>Price: $5.99</p>
+                    <p>Nutritional Info: Calories (226kcal)</p>
+                    <button class="add-to-cart" data-item="Pancakes" data-price="5.99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dessert -->
+        <div class="menu-container" id="dessert-menu" style="display: none;">
+            <div class="menu-item">
+                <img src="sundae.jpg" alt="Sundae Cone">
+                <div class="item-info">
+                    <h2>Sundae Cone</h2>
+                    <p>Price: $1.99</p>
+                    <p>Nutritional Info: Calories (134kcal)</p>
+                    <button class="add-to-cart" data-item="Sundae Cone" data-price="1.99">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="Fries.jpg" alt="French Fries">
+                <div class="item-info">
+                    <h2>French Fries</h2>
+                    <p>Price: $2.99</p>
+                    <p>Nutritional Info: Calories (423kcal)</p>
+                    <button class="add-to-cart" data-item="French Fries" data-price="2.99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+    <div id="cart" class="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items" class="cart-items">
+            <!-- Cart items will be added dynamically here -->
+        </ul>
+        <p>Total: $<span id="cart-total" class="cart-total">0.00</span></p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ahmad's. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <li><a href="Accessibility.html">Accessibility</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showCategory('all');
+        });
+
+        function showCategory(category) {
+            var allMenus = document.querySelectorAll('.menu-container');
+            allMenus.forEach(function(menu) {
+                menu.style.display = 'none';
+            });
+
+            if (category === 'all') {
+                allMenus.forEach(function(menu) {
+                    menu.style.display = 'flex';
+                });
+            } else {
+                document.getElementById(category + '-menu').style.display = 'flex';
+            }
+            
+        }
+
+        
+    </script>
+</body>
+</html>

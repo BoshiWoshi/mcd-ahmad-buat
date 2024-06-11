@@ -1,0 +1,265 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    position: relative;
+    
+}
+
+/* CSS for header icons alignment */
+header
+
+#logo {
+    height: 50px;
+    cursor: pointer;
+    margin-left: 350px; /* Set margin to position the logo */
+
+
+}
+
+
+
+/* CSS for menu header */
+.menu-header {
+    margin-left: 350px; /* Adjust left margin as needed */
+}
+
+.custom-height {
+    height: 200px;
+    width: auto;
+}
+
+/* CSS for banner */
+.banner {
+    width: 100%;
+    height: 745px; /* Ensure this height matches your desired height */
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#banner-pls{
+
+    height: 745px;
+    width: 100%;
+}
+
+/* CSS for main content */
+#main-content {
+    overflow-y: auto; /* Add vertical scrollbar when content overflows */
+    max-height: calc(100vh - 100px); /* Adjust max height as needed */
+}
+
+.menu-item img {
+    max-width: 540px; /* Set the maximum width */
+    height: 420px; /* Set the fixed height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 10px;
+}
+
+
+
+/* Style for primary button (Sign Up) */
+.button-primary {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Set margin to position the logo */
+
+}
+
+/* Hover and focus effects */
+.button-primary:hover,
+.button-primary:focus {
+    background-color: #0056b3; /* Darker blue color */
+}
+
+/* Style for secondary button (Login) */
+.button-secondary {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 300px; /* Set margin to position the logo */
+}
+
+/* Hover and focus effects */
+.button-secondary:hover,
+.button-secondary:focus {
+    background-color: #218838; /* Darker green color */
+}
+
+
+#search-bar {
+    width: 60%;
+    padding: 5px;
+    margin: 0 20px;
+    margin-left: 40px; /* Set margin to position the search bar */
+
+}
+
+#cart-button {
+    background-color: #e4002b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto; /* Push the cart button to the right */
+    margin-right: 10px; /* Set margin to position the cart button */
+}
+
+#signup-button {
+    margin-right: 10px; /* Set margin to position the sign-up button */
+}
+
+#cart-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ddd;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#cart-dropdown #cart-items {
+    padding: 10px;
+}
+
+#cart-dropdown #cart-total {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+    font-weight: bold;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Gap between items */
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.menu-item {
+    width: calc(50% - 10px); /* Each item occupies 50% width minus gap */
+    text-align: center;
+}
+
+
+
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.item-info input {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    background-color: #e4002b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-content ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-content ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer styling */
+footer {
+    flex-shrink: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    height: 100px;
+
+}
+
+

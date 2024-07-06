@@ -5,185 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>McDonald's Menu</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
 
     <style>
+       
 
-        .banner {
-            width: 1860px;
-            height: 745px; /* Adjusted height */
-            position: relative; /* Allows text to be positioned over the image */
-            overflow: hidden; /* Ensure the image stays within the banner */
-        }
-
-        .banner img {
-            width: 100%;
-            height: auto; /* Ensure the image scales proportionally */
-            display: block; /* Remove any default spacing */
-        }
-
-        .banner-text {
-            position: absolute;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        /* CSS for rounded search bar */
-        #search-bar {
-            padding: 10px;
-            border-radius: 20px; /* Adjust the border-radius value to change the roundness */
-            border: 2px solid #ddd; /* Border color */
-            font-size: 16px;
-            outline: none; /* Remove outline when focused */
-            transition: border-color 0.3s ease; /* Smooth transition for border color change */
-            width: 300px; /* Adjust width as needed */
-        }
-
-        /* Style for hover and focus effects */
-        #search-bar:hover,
-        #search-bar:focus {
-            border-color: #aaa; /* Border color when hovered or focused */
-        }
-
-        #cart-button {
-            padding: 10px 20px; /* Adjust padding for button size */
-            border-radius: 20px; /* Adjust the border-radius value to change the roundness */
-            border: none; /* Remove default button border */
-            background-color: #d50000; /* Button background color */
-            color: #333; /* Button text color */
-            font-size: 16px;
-            cursor: pointer; /* Show pointer cursor on hover */
-            transition: background-color 0.3s ease; /* Smooth transition for background color change */
-            outline: none; /* Remove outline when focused */
-        }
-
-        /* Style for hover and focus effects */
-        #cart-button:hover,
-        #cart-button:focus {
-            background-color: #ffd633; /* Button background color when hovered or focused */
-        }
-
-        .category-button {
-            background-color: #d50000;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            margin-right: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            outline: none;
-        }
-
-        .category-button:hover,
-        .category-button:focus {
-            background-color: #b71c1c;
-        }
-
-        /* CSS for menu categories */
-        .menu-categories {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        /* CSS for menu items */
-        .menu-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .menu-item {
-            margin-bottom: 20px;
-            width: calc(33.333% - 20px); /* Subtracting the margin to fit 3 columns */
-            text-align: center;
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
-        }
-
-        .menu-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .menu-item button {
-            margin-top: 10px;
-            padding: 8px 20px;
-            border: none;
-            border-radius: 20px;
-            background-color: #d50000;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu-item button:hover,
-        .menu-item button:focus {
-            background-color: #b71c1c;
-        }
-
-        /* Aesthetic button styles */
-        .button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .button-primary {
-            background-color: #007bff;
-            color: #333;
-        }
-
-        .button-primary:hover,
-        .button-primary:focus {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .button-secondary {
-            background-color: #4CAF50;
-            color: #fff;
-        }
-
-        .button-secondary:hover,
-        .button-secondary:focus {
-            background-color: #45a049;
-        }
-
-        /* CSS for banner */
-        .banner {
-        width: 100%;
-        height: 745px; /* Ensure this height matches your desired height */
-        position: relative;
-        overflow: hidden;
-        }
-
-        .banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        }
-
-        .banner-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        }
-
-        #banner-pls {
-        height: 745px;
-        width: 100%;
-        }
     </style>
 </head>
 <body>
@@ -199,8 +26,8 @@
         </div>
         
     
-        <a href="signup.html" class="button button-primary">Sign Up</a>
-        <a href="login.html" class="button button-secondary">Login</a>
+        <a href="register.php" class="button button-primary">Sign Up</a>
+        <a href="login.php" class="button button-secondary">Login</a>
         
     </header>
 
@@ -323,13 +150,7 @@
 
         
     </main>
-    <div id="cart" class="cart">
-        <h2>Cart</h2>
-        <ul id="cart-items" class="cart-items">
-            <!-- Cart items will be added dynamically here -->
-        </ul>
-        <p>Total: $<span id="cart-total" class="cart-total">0.00</span></p>
-    </div>
+    
 
     <footer>
         <div class="footer-content">
